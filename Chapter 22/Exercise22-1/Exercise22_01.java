@@ -29,15 +29,14 @@ public class Exercise22_01 {
 			chars.add(c);
 		}
 		
-		// Find greatest substring
-		String greatestSub = "";
-		StringBuilder stringBuilder = new StringBuilder(greatestSub);
-		for (int i = 0; i < chars.size(); i++) {
-			if (chars.get(i) < chars.get(i + 1)) {
-				stringBuilder.append(chars.get(i));
+		StringBuilder stringBuilder = new StringBuilder();
+		for (int i = 0, j = 1; i < chars.size() && j < chars.size(); i++, j++) {
+			if (chars.get(i) < chars.get(j)) {
+				System.out.println("WORKING ON IT");
 			}
 		}
-		return greatestSub;
+		
+		return userString;
 	}
-
+	
 }
