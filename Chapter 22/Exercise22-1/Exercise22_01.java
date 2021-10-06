@@ -6,6 +6,8 @@
  * outputs the maximum consecutive substring of it.
  */
 import java.util.Scanner;
+import java.util.*;
+
 public class Exercise22_01 {
 
 	public static void main(String[] args) {
@@ -21,12 +23,21 @@ public class Exercise22_01 {
 	}
 	
 	public static String maxSubstring(String userString) {
-		char a = userString.charAt(0);
-		char b = userString.charAt(1);
-		if (Character.toLowerCase(a) < Character.toLowerCase(b)) {
-			System.out.println(a + " < " + b);
+		// Convert userString to ArrayList of characters
+		ArrayList<Character> chars = new ArrayList<Character>();
+		for (char c: userString.toCharArray()) {
+			chars.add(c);
 		}
-		return userString;
+		
+		// Find greatest substring
+		String greatestSub = "";
+		StringBuilder stringBuilder = new StringBuilder(greatestSub);
+		for (int i = 0; i < chars.size(); i++) {
+			if (chars.get(i) < chars.get(i + 1)) {
+				stringBuilder.append(chars.get(i));
+			}
+		}
+		return greatestSub;
 	}
 
 }
