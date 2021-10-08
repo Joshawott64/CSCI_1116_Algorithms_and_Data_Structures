@@ -49,3 +49,13 @@ public class Exercise22_01 {
 	}
 	
 }
+
+/*
+* Time complexity analysis:
+*
+* It is a constant time c for executing the if-statements within the first loop.
+* The first loop executes n times, so the time complexity is T(n) = (c) * n = O(n).
+*
+* The second loop executes n times, and finishedString.append(ch) takes a constant time c to execute.
+* Therefore, the time complexity is T(n) = (c) * n = O(n).
+*/
